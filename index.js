@@ -64,17 +64,17 @@
 
 // map.set('word', ()=>{console.log('hi!');})
 
-const dictionary = new Map();
-dictionary.set('copy','копіювати')
-dictionary.set('subcsribe','підписатися')
-dictionary.set('send','відправити')
-dictionary.set('share','поділитися')
-dictionary.set('add to cart','додати в корзину')
-dictionary.set('zoom','збільшити')
-dictionary.set('play','грати')
+// const dictionary = new Map();
+// dictionary.set('copy','копіювати')
+// dictionary.set('subcsribe','підписатися')
+// dictionary.set('send','відправити')
+// dictionary.set('share','поділитися')
+// dictionary.set('add to cart','додати в корзину')
+// dictionary.set('zoom','збільшити')
+// dictionary.set('play','грати')
 
-const word = prompt('enter any word');
-console.log(dictionary.get(word));
+// const word = prompt('enter any word');
+// console.log(dictionary.get(word));
 
 // const lang = prompt ('1 - en, 2 - uk');
 
@@ -90,3 +90,72 @@ console.log(dictionary.get(word));
 //             default:
 //                 break;
 // }
+
+//1
+// function User (name, age){
+//     this.name  = name;
+//     this.age = age;
+// }
+
+//2
+// function UserPrototype(){
+//     this.logName = function(){
+//         console.log(this.name)
+//     }
+// }
+
+//3
+// User.Prototype = new UserPrototype();
+
+//4
+// const user = new USer ('Alex', 23);
+// console.log(user);
+// user.logName()
+
+// class User {
+//     constructor(name, age){
+//         this.name = name;
+//         this.age = age;
+//     }
+//     logName(){
+//         return this.name;
+//     }
+//     eat(){
+//         return `$`
+//     }
+// }
+// class Book {
+//     constructor(title, author){
+//         this.title = title;
+//         this.author = author;
+//         this.id = Book.count++;
+
+//     }
+//     static count = 0;
+//     showInfo(){
+//         return `"${this.title}" $"{}"`
+//     }
+//     (){
+        
+//     }
+// }
+
+class Library {
+    constructor(){
+        this.books = [];
+        this.readers = [];
+        booksAndReaders = [];
+    }
+    addBook(book){
+        this.books.push(book);
+    }
+    addReader(...reader){
+        this.readers.push(...reader);
+    }
+}
+const book1 = new Book ('It','King');
+const book2 = new Book ('Autsider', 'King')
+const user1 = new Reader ('Brad')
+const user2 = new Reader ('Anna')
+const library = new Library();
+library.addBook(book1, book2);
